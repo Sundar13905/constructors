@@ -181,6 +181,15 @@ int main() {
 
 5. **Complex Debugging:** Errors in destructors can be difficult to debug, especially if they are related to resource management.
 
+| **Feature**          | **Constructor**                                     | **Destructor**                                    |
+|----------------------|----------------------------------------------------|--------------------------------------------------|
+| **Purpose**          | Initializes an object.                             | Cleans up an object.                             |
+| **Syntax**           | Same name as the class, no return type.            | Same name as the class, preceded by `~`, no return type. |
+| **Invocation**       | Called when an object is created.                  | Called when an object is destroyed.              |
+| **Overloading**      | Can be overloaded.                                 | Cannot be overloaded.                            |
+| **Execution Order**  | Executed first when the object is created.         | Executed last when the object is destroyed.      |
+| **Parameters**       | Can take parameters.                               | Cannot take parameters.                          |
+
 ~~~
 #include <iostream>
 
