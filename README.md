@@ -70,3 +70,73 @@ The primary purpose of a constructor is to initialize the object's data members 
 1. Performance Overhead: Copying large objects can be time-consuming and resource-intensive, especially if deep copies are involved.
 2. Unintended Copies: Unintended use of the copy constructor (e.g., passing objects by value) can lead to performance issues or unexpected behavior.
 3. Complexity: Implementing a custom copy constructor, especially for classes managing resources, can be complex and error-prone. If not implemented correctly, it can lead to issues like memory leaks or shallow copies.
+
+## Code 
+~~~
+#include <iostream>
+#include <string>
+// sundaravadivelan karthikeyan 
+// 23070123136
+// Experiment 12 Constructors 
+
+class Person {
+    std::string name;
+    int age;
+
+public:
+    // Default constructor 
+    Person() : name("Unknown"), age(0) {
+        std::cout << "Default constructor called.\n";
+    }
+
+    // Parameterized constructor 
+    Person(std::string n, int a) : name(n), age(a) {
+        std::cout << "Parameterized constructor called.\n";
+    }
+
+    // Constructor defined outside the class
+    Person(std::string n);
+
+    // Copy constructor
+    Person(const Person &p) {
+        name = p.name;
+        age = p.age;
+        std::cout << "Copy constructor called.\n";
+    }
+
+    void display() {
+        std::cout << "Name: " << name << ", Age: " << age << std::endl;
+    }
+};
+
+// Constructor defined outside the class
+Person::Person(std::string n) : name(n), age(0) {
+    std::cout << "Constructor defined outside the class called.\n";
+}
+
+int main() {
+    // Using the default constructor
+    Person p1;
+    p1.display();
+
+    // Using the parameterized constructor
+    Person p2("Alice", 25);
+    p2.display();
+
+    // Using the constructor defined outside the class
+    Person p3("Bob");
+    p3.display();
+
+    // Using the copy constructor
+    Person p4 = p2;
+    p4.display();
+
+    return 0;
+}
+~~~
+## Code Output 
+![](https://github.com/Sundar13905/constructors/blob/main/Constructor_output.png)
+
+## Conclusion 
+- We learnt how to execute a code using different types of constructors in C++ programming language
+- We learnt the different types of constructors , their advantages, the disadvantages and the applications 
