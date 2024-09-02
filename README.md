@@ -1,4 +1,4 @@
-# Constructors and Deconstructors 
+# Constructors and Destructors 
 
 # Experiment 12 To study and implement Constructors and Destructors
 
