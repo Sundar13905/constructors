@@ -240,7 +240,7 @@ int main() {
 
 -----------------------------------------------------------------------
 
-# Experimeent 13 To study and implement Constructor Overloading
+# Experiment 13 To study and implement Constructor Overloading
 
 ## Aim
 To write a code using constructor overloading
@@ -300,13 +300,13 @@ public:
     // Default constructor
     Box() {
         width = height = depth = 0;
-        cout << "Default constructor called!" << endl;
+
     }
 
     // Constructor with one parameter
     Box(double side) {
         width = height = depth = side;
-        cout << "Constructor with one parameter called!" << endl;
+        
     }
 
     // Constructor with three parameters
@@ -314,7 +314,7 @@ public:
         width = w;
         height = h;
         depth = d;
-        cout << "Constructor with three parameters called!" << endl;
+        
     }
 
     void showVolume() {
@@ -333,8 +333,11 @@ int main() {
     cin>>wd>>ht>>dep;
     Box box3(wd,ht,dep); // Calls the constructor with three parameters
 
+    cout << "Default constructor called!" << endl;
     box1.showVolume();
+    cout << "Constructor with one parameter called!" << endl;
     box2.showVolume();
+    cout << "Constructor with three parameters called!" << endl;
     box3.showVolume();
 
     return 0;
@@ -343,7 +346,7 @@ int main() {
 ~~~
 
 ## Code Ouput: -
-
+![](https://github.com/Sundar13905/constructors/blob/main/Constructor_overloading.png)
 
 
 ## Conclusion: -
